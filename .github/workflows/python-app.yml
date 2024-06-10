@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run tests
-      run: python hotel_booking_test.py
+      run: python -m unittest discover -v
   
   Teste-Windows:
     name: Test on Windows
@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run tests
-      run: python hotel_booking_test.py
+      run: python -m unittest discover -v
   
   Teste-Mac:
     name: Test on Mac
@@ -35,4 +35,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run tests
-      run: python hotel_booking_test.py
+      run: python -m unittest discover -v
