@@ -13,16 +13,25 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  Teste-Ubuntu:
+    name: Test on Ubuntu
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-    - name: Unit Tests
+    - name: Run tests
       run: python hotel_booking_test.py
   
-  Teste:
-    runs-on: ubuntu-latest
+  Teste-Windows:
+    name: Test on Windows
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: python hotel_booking_test.py
+  
+  Teste-Mac:
+    name: Test on Mac
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
     - name: Run tests
